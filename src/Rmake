@@ -1,0 +1,5 @@
+
+export PKG_LIBS='`Rscript -e "Rcpp:::LdFlags()"` -O2 -std=c++11 '
+export PKG_CXXFLAGS='`Rscript -e "Rcpp:::CxxFlags()"` -O2 -std=c++11'
+R CMD SHLIB moran.cpp moranMatrix.cpp rmain.cpp wfisher.cpp utils.cpp
+
